@@ -1,0 +1,56 @@
+
+The following gives information that should assist you in getting the 
+program installed and working.
+
+I think the first step is to create the data directory and the sub-directories.
+We simply created a directory and named it 'data'.  The top-level name is not critical
+but the sub-directory and filenames are critical.
+
+The first level directory must be:
+
+<course>-<semesterYY>-<instructor>
+
+A full directory example = CS2413-Fall08-Williams
+
+Within each of those directories is:
+
+<assignment>-<sequence>-<ABETCriteriaCodes>
+
+Where:
+
+assignment is the type of files being tracked. 
+
+For instance: "Homework, Exam, Project, Quiz"
+
+sequence is simply an integer 1-X
+
+ABETCriteriaCodes is a string of all of the criteria that this assignment
+satisfies.  
+
+For instance:  KIABC
+
+A full directory example = Project-4-KIABHC
+
+Within each of these directories will be the Average, Worst, Best, Instructions,
+and Solution entries.  They can be either directories or files but need to be named, Average, Worst, 
+Best, Instructions, Solutions.  If a directory is used then within that is where you should place all of the
+associated files for that exhibit.  
+
+Now copy the dataselect.html file your desired location on your webserver and edit it to
+match the course, instructor, semester, etc....  
+
+IMPORTANT:  Be sure to edit the value of the "action=" in the form tag to point to the location of 
+the showresults.pl script.
+
+IMPORTANT:  The values passed to the perl script are case sensitive.  So beware.  In other words any
+of the search criteria is case-sensitive and hence when the grep is done it will affect the results.
+Removal of case sensitivity would require editing the perl script to fix the regex's to ignore case.
+
+Now place the showresults.pl script in a place it can be executed by your
+webserver.  This location should match the action parameter in the form tag of the dataselect.html.  
+
+IMPORTANT:  You must edit the datadir and webpath variables to match the locations on your webserver.
+
+Once you have the initial structure created you can begin using the data retrieval tool.  As new
+results come in save them as outlined above and they will be available for retrieval.
+

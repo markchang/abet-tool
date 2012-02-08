@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CS-ABET Data Selector</title>
+<style type="text/css">
+<!--
+h1,h2,h3
+{
+font-family: verdana, arial, 'sans serif'; 
+}
+
+p,table,li
+{
+	font-family: verdana, arial, 'sans serif';
+	font-size: x-small;
+}
+basefont {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: medium;
+}
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: italic;
+}
+-->
+</style>
+</head>
+
+<body>
+<h1 align="center">ABET Data Selector</h1>
+<form id="form1" name="form1" method="post" action="/cgi-bin/showresults.pl">
+  <span class="style1">Check each item that you would like to search for.  Each group will be 'anded' together.
+  The values within each group will be 'or'd together.</span>  
+  <hr/>
+  <table width="100%" border="0" cellspacing="1" cellpadding="1">
+    <tr>
+      <th align="left" scope="col">Course</th>
+      <th align="left" scope="col">Semester</th>
+      <th align="left" scope="col">Instructor</th>
+      <th align="left" scope="col">Outcome</th>
+    </tr>
+    <tr valign="top">
+      <td>
+        <!-- ADD COURSES HERE -->
+        <INPUT type="checkbox" name="course" value="ENGR3410">ENGR3410 - Computer Architecture<BR>      
+        <INPUT type="checkbox" name="course" value="ENGR3499A">ENGR3499A - Mobile Application Development<BR>      
+      </td>
+      <td>
+     
+      <!-- ADD SEMESTERS HERE --> 
+      <INPUT type="checkbox" name="semester" value="Fall10">Fall 2010<BR>
+      <INPUT type="checkbox" name="semester" value="Spring11">Spring 2011<BR>
+      <INPUT type="checkbox" name="semester" value="Fall11">Fall 2011<BR>
+      </td>
+      <td>
+        <!-- ADD INSTRUCTORS HERE -->
+        <INPUT type="checkbox" name="instructor" value="Chang">Chang<BR>
+      </td>
+      <td>
+      <INPUT type="checkbox" name="outcome" value="A">A - Apply computing and mathematics<BR>
+      <INPUT type="checkbox" name="outcome" value="B">B - Computing requirements<BR>
+      <INPUT type="checkbox" name="outcome" value="C">C - Design system to meet needs<BR>
+      <INPUT type="checkbox" name="outcome" value="D">D - Teamwork<BR>
+      <INPUT type="checkbox" name="outcome" value="E">E - Professional responsibilities<BR>
+      <INPUT type="checkbox" name="outcome" value="F">F - Communication<BR>
+      <INPUT type="checkbox" name="outcome" value="G">G - Impact of computing<BR>
+      <INPUT type="checkbox" name="outcome" value="H">H - Professional development<BR>
+      <INPUT type="checkbox" name="outcome" value="I">I - Current techniques<BR>
+      <INPUT type="checkbox" name="outcome" value="J">J - Design tradeoffs<BR>
+      <INPUT type="checkbox" name="outcome" value="K">K - Construct software<BR>
+      </td>
+    </tr>
+    </table>
+    <hr/>
+    <table width="100%" border="0" cellspacing="1" cellpadding="1">
+    <tr><td align="center">
+        	<strong>Sort By:</strong><BR />
+            <INPUT type="radio" name="sorto" value="0" checked> Course
+            <INPUT type="radio" name="sorto" value="1"> Semester
+            <INPUT type="radio" name="sorto" value="2"> Instructor
+            <INPUT type="radio" name="sorto" value="3"> Exhibit
+            <INPUT type="radio" name="sorto" value="5"> Outcome
+
+    </td>
+    </tr>
+  </table>
+
+    <hr/>
+    <table width="100%" border="0" cellspacing="1" cellpadding="1">
+    <tr><td align="center">
+      <input type="submit" name="Search" id="Search" value="Search" />
+      <input type="submit" name="selAll" id="all" value="Select All" />
+    <input type="reset" name="Reset" id="Reset" value="Reset" />
+    </td>
+    </tr>
+  </table>
+  
+  <p>
+    
+  </p>
+  <p>&nbsp;  </p>
+  
+  
+</form>
+</body>
+</html>
